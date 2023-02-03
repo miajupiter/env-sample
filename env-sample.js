@@ -9,8 +9,6 @@ var options = {
 }
 
 function generateEnvSample(userOptions) {
-  console.log('generateEnvSample', process.argv)
-
   if (userOptions) {
     Object.assign(options, userOptions)
   }
