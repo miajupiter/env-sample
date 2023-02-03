@@ -1,11 +1,11 @@
-
 const fs = require('fs')
 const path = require('path')
 
 var options = {
-  envPath: path.join(__dirname, '.env'),
-  envSamplePath: path.join(__dirname, '.env-sample'),
+  envPath: '.env',
+  envSamplePath: '.env-sample',
   maskChar: ' ',
+  bottomBanner:`# 2023-Now (c) MiaJupiter. All rights reserved. https://miajupiter.com`
 }
 
 function generateEnvSample(userOptions) {
@@ -30,7 +30,7 @@ function generateEnvSample(userOptions) {
         line = line.substring(endQuotePosition + 1)
         let commentPos = line.indexOf('#')
         if (commentPos > -1) {
-          s += line.substring(commentPos) + '\n'
+          s +=' ' + line.substring(commentPos) + '\n'
         }
         startedQuote = ''
       }
@@ -58,15 +58,19 @@ function generateEnvSample(userOptions) {
             s+=paramValue
           }
           startedQuote = ''
-
+          s += '\n'
         }
       } else {
         s += line
+        s += '\n'
       }
-      s += '\n'
+      
     }
   })
 
+  if(options.bottomBanner) {
+    s += `\n\n${options.bottomBanner}`
+  }
   fs.writeFileSync(options.envSamplePath, s, 'utf8')
 }
 
