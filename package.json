@@ -7,8 +7,8 @@
     "test": "echo test"
   },
   "bin": {
-    "env-sample": "./env-sample.js --cli",
-    "env-sample-cli": "./env-sample.js --cli"
+    "env-sample": "./cli.js",
+    "env-sample-cli": "./cli.js"
   },
   
   "repository": {

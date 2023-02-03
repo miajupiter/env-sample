@@ -3,8 +3,6 @@
 try {
   const envSample=require(`./env-sample.js`)
 
-  console.log(process.argv)
-  
   envSample()
     
 } catch(err) {
