@@ -2,20 +2,20 @@ const fs = require('fs')
 const path = require('path')
 
 var options = {
-  envPath: '.env',
-  envSamplePath: '.env-sample',
-  maskChar: ' ',
-  bottomBanner:`# 2023-Now (c) MiaJupiter. All rights reserved. https://miajupiter.com`
+  env: '.env',
+  sample: '.env-sample',
+  mask: ' ',
+  banner:`2023-Now (c) MiaJupiter. All rights reserved. https://miajupiter.com`
 }
 
 function generateEnvSample(userOptions) {
   if (userOptions) {
     Object.assign(options, userOptions)
   }
-  if (!fs.existsSync(options.envPath))
-    throw `Error: File does not exist: "${options.envPath}"`
+  if (!fs.existsSync(options.env))
+    throw `Error: File does not exist: "${options.env}"`
 
-  let lines = fs.readFileSync(options.envPath, 'utf8').split('\n')
+  let lines = fs.readFileSync(options.env, 'utf8').split('\n')
   let s = ''
 
   let startedQuote = ''
@@ -47,8 +47,8 @@ function generateEnvSample(userOptions) {
             paramValue = paramValue.substring(endQuotePosition + 1)
             let commentPos = paramValue.indexOf('#')
             if (commentPos > -1) {
-              if (options.maskChar.length > 0) {
-                s += options.maskChar[0].repeat(commentPos)
+              if (options.mask.length > 0) {
+                s += options.mask[0].repeat(commentPos)
               }
               s += ' ' + paramValue.substring(commentPos)
             }
@@ -66,10 +66,12 @@ function generateEnvSample(userOptions) {
     }
   })
 
-  if(options.bottomBanner) {
-    s += `\n\n${options.bottomBanner}`
+  if(options.banner) {
+    s += `\n\n`
+    s+=`# ${'-'.repeat(options.banner.length)}\n`
+    s+=`# ${options.banner}`
   }
-  fs.writeFileSync(options.envSamplePath, s, 'utf8')
+  fs.writeFileSync(options.sample, s, 'utf8')
 }
 
 module.exports = generateEnvSample

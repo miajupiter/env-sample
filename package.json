@@ -1,7 +1,7 @@
 {
   "name": "env-sample",
   "version": "1.0.0",
-  "description": "Removes your secret values in '.env' file and generate '.env.sample'. It supports multiline values and protects comments.",
+  "description": "Removes your secret values in '.env' file and generate '.env-sample'. It supports multiline values and protects comments.",
   "main": "env-sample.js",
   "scripts": {
     "test": "echo test"
@@ -10,7 +10,6 @@
     "env-sample": "./cli.js",
     "env-sample-cli": "./cli.js"
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/miajupiter/env-sample.git"
@@ -28,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/miajupiter/env-sample/issues"
   },
-  "homepage": "https://github.com/miajupiter/env-sample#readme"
+  "homepage": "https://github.com/miajupiter/env-sample#readme",
+  "dependencies": {
+    "yargs": "^17.6.2"
+  }
 }
