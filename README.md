@@ -78,7 +78,7 @@ envSample()
 ## Before After Example
 
 ### Before | Source `.env`
-```md
+```markdown
 # jwt variables
 TOKEN_EXPIRES_IN=31536022 # valid for 1 year
 TOKEN_PHRASE=upperWorld
@@ -104,7 +104,7 @@ TEST=4444
 ```
 
 ### After | Target `.env.sample`
-```md
+```markdown
 # jwt variables
 TOKEN_EXPIRES_IN= # valid for 1 year
 TOKEN_PHRASE=
