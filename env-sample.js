@@ -3,8 +3,8 @@ const path = require('path')
 
 var options = {
   env: '.env',
-  sample: '.env-sample',
-  mask: ' ',
+  sample: '.env.sample',
+  mask: '',
   banner:`2023-Now (c) MiaJupiter. All rights reserved. https://miajupiter.com`
 }
 
@@ -67,7 +67,7 @@ function generateEnvSample(userOptions) {
   })
 
   if(options.banner) {
-    s += `\n\n`
+    s += `\n`
     s+=`# ${'-'.repeat(options.banner.length)}\n`
     s+=`# ${options.banner}`
   }
