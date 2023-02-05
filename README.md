@@ -6,7 +6,10 @@
 ----
 
 # env-sample
-<a href="https://www.npmjs.com/package/env-sample"><img src="https://img.shields.io/npm/v/env-sample" alt="NPM Version" /></a> <a href="https://www.npmjs.com/package/env-sample"><img src="https://img.shields.io/npm/dm/env-sample" alt="NPM Downloads" /></a> [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fmiajupiter%2Fenv-sample&count_bg=%236495ED&title_bg=%23555555&icon=cliqz.svg&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+
+[![](https://img.shields.io/badge/website-miajupiter.com-yellowgreen.svg)](https://miajupiter.com) ![npm](https://img.shields.io/npm/v/env-sample) <a href="https://www.npmjs.com/package/env-sample"><img src="https://img.shields.io/npm/dm/env-sample" alt="NPM Downloads" /></a> ![GitHub](https://img.shields.io/github/license/miajupiter/env-sample) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fmiajupiter%2Fenv-sample&count_bg=%236495ED&title_bg=%23323232&icon=cliqz.svg&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com) [![](https://img.shields.io/badge/readme-docs-chocolate.svg)](https://github.com/miajupiter/env-sample#readme)
+
+
 
 ## Table of contents
 
@@ -145,4 +148,4 @@ TEST=
 
 ## License - MIT License
 
-Copyright (c) 2023-**Now** [MiaJupiter Technology](https://miajupiter.com). All rights reserved. We are proud to be [Open Source](https://opensource.org). For full details about the license, please check the `LICENSE` file in the root directory of the source repository.
+Copyright (c) 2023-**Now** [MiaJupiter Technology Inc.](https://miajupiter.com). All rights reserved. We are proud to be [Open Source](https://opensource.org). For full details about the license, please check the `LICENSE` file in the root directory of the source repository.
