@@ -5,16 +5,35 @@ var options = {
   env: '.env',
   sample: '.env.sample',
   mask: '',
+  watch: false,
   banner:`2023-Now (c) MiaJupiter. All rights reserved. https://miajupiter.com`
 }
 
-function generateEnvSample(userOptions) {
+module.exports = (userOptions) =>{
   if (userOptions) {
     Object.assign(options, userOptions)
   }
-  if (!fs.existsSync(options.env))
-    throw `Error: File does not exist: "${options.env}"`
 
+  // on startup check source file exists
+  if (!fs.existsSync(options.env) && fs.existsSync(options.sample)) {
+    fs.unlinkSync(options.sample)
+    return
+  }
+
+  if(options.watch===true) {
+    fs.watchFile(options.env, (current, previous) => {
+      if(current.nlink==0){
+        fs.existsSync(options.sample) && fs.unlinkSync(options.sample)
+      }else{
+        generateEnvSample()
+      }
+    })
+  }
+
+
+}
+
+function generateEnvSample() {
   let lines = fs.readFileSync(options.env, 'utf8').split('\n')
   let s = ''
 
@@ -73,5 +92,3 @@ function generateEnvSample(userOptions) {
   }
   fs.writeFileSync(options.sample, s, 'utf8')
 }
-
-module.exports = generateEnvSample

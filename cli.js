@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 
 const args = require('yargs').argv
+console.log(`args`, args)
+console.log(`process.argv`, process.argv)
+console.log(`process.argv0`, process.argv0 )
 
 if(args.h || args.help){
   let s=`
@@ -8,12 +11,16 @@ if(args.h || args.help){
   
   Options:
 
-  -e, --env            source '.env' file relative or full path
-  -s, --sample         target '.env.sample' file relative or full path
-  -m, --mask           mask character. example: '*', ' ',... etc. default is '' (empty string)
-  -b, --banner         set your specified banner. to bottom of '.env.sample' file
-  -v, --version        output the version number
-  -h, --help           output usage information
+  -e, --env             Source file. default is ".env"
+  -s, --sample          Target file. default ".env.sample"
+  -m, --mask            Mask character. example: "*", " ", etc.
+                        default is "" (empty string)
+  -b, --banner          Set your banner to bottom of target.
+      --banner=""       Remove default banner.
+  -w, --watch           Watch source file. If the source file is deleted,
+                        the target file is also deleted.
+  -v, --version         output the version number
+  -h, --help            output usage information
 `
   console.log(s)
   process.exit(0)
@@ -32,5 +39,6 @@ if(args.e || args.env) userOptions.env=(args.e || args.env)
 if(args.s || args.sample) userOptions.sample=(args.s || args.sample)
 if(args.m || args.mask) userOptions.mask=(args.m || args.mask)
 if(args.b || args.banner) userOptions.banner=(args.b || args.banner)
+if(args.w || args.watch) userOptions.watch=(args.w || args.watch)
 
 envSample(userOptions)
