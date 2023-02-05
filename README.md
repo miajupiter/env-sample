@@ -1,8 +1,13 @@
+<p align="center">
+<a href="https://miajupiter.com" _target="blank">
+<img src="https://github.com/miajupiter/.github/raw/main/images/miajupiter-logo.png"  width="320" />
+</a>
+
+----
 
 # env-sample
 <a href="https://www.npmjs.com/package/env-sample"><img src="https://img.shields.io/npm/v/env-sample" alt="NPM Version" /></a> <a href="https://www.npmjs.com/package/env-sample"><img src="https://img.shields.io/npm/dm/env-sample" alt="NPM Downloads" /></a> [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fmiajupiter%2Fenv-sample&count_bg=%236495ED&title_bg=%23555555&icon=cliqz.svg&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
-[miajupiter.com](https://miajupiter.com) | [documentation](https://github.com/miajupiter/env-sample#readme)
 ## Table of contents
 
 - [Introduction](#introduction)
@@ -10,7 +15,7 @@
   - [Install](#install)
   - [Usage](#usage)
 - [Package Installation](#package-installation)
-  - [Installation](#installation)
+  - [Install](#installation)
   - [Usage](#usage)
     - [default](#default)
     - [with `option` object parameter](#with-option-object-parameter)
@@ -42,20 +47,25 @@ $ env-sample -h
   Usage: env-sample [options]
 
   Options:
-
-  -e, --env            source '.env' file relative or full path
-  -s, --sample         target '.env.sample' file relative or full path
-  -m, --mask           mask character. example: '*', default is ''
-  -b, --banner         set your specified banner. to bottom of '.env.sample' file
-  -v, --version        output the version number
-  -h, --help           output usage information
-
+  
+  -e, --env             Source file. default is ".env"
+  -s, --sample          Target file. default ".env.sample"
+  -m, --mask            Mask character. example: "*", " ", etc.
+                        default is "" (empty string)
+  -b, --banner          Set your banner to bottom of target.
+      --banner=""       Remove default banner.
+  -w, --watch           Watch source file. If the source file is deleted,
+                        the target file is also deleted.
+  -v, --version         output the version number
+  -h, --help            output usage information
 ```
+
+
 ## Package Installation
 
 ### Installation
 ```bash
-npm install env-sample --save
+npm install env-sample
 ```
 
 ### Usage
@@ -66,19 +76,23 @@ const envSample = require('env-sample')
 envSample()
 ```
 #### with `option` object parameter
-```js
+
+```javascript
 const envSample = require('env-sample')
-const option={
-	envPath: '.env',
-	envSamplePath: '.env.sample',
-	maskChar:''
+const options={
+	env: '.env',
+	sample: '.env.sample',
+	mask: '',
+	watch: false,
+	banner:`2023-Now (c) MiaJupiter. All rights reserved. https://miajupiter.com`
 }
-envSample()
+envSample(options)
 ```
 ## Before After Example
 
 ### Before | Source `.env`
-```markdown
+
+```dosini
 # jwt variables
 TOKEN_EXPIRES_IN=31536022 # valid for 1 year
 TOKEN_PHRASE=upperWorld
@@ -104,7 +118,8 @@ TEST=4444
 ```
 
 ### After | Target `.env.sample`
-```markdown
+
+```dosini
 # jwt variables
 TOKEN_EXPIRES_IN= # valid for 1 year
 TOKEN_PHRASE=
