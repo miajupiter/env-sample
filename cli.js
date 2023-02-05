@@ -1,9 +1,6 @@
 #!/usr/bin/env node
 
 const args = require('yargs').argv
-console.log(`args`, args)
-console.log(`process.argv`, process.argv)
-console.log(`process.argv0`, process.argv0 )
 
 if(args.h || args.help){
   let s=`
