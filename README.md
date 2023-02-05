@@ -8,7 +8,7 @@
 
 # env-sample 
 
-[![npm](https://img.shields.io/npm/v/env-sample?label=npm&logo=npm) ](https://www.npmjs.com/package/env-sample) [![download](https://img.shields.io/npm/dt/env-sample?label=downloads&logo=npm)](https://www.npmjs.com/package/env-sample) ![GitHub](https://img.shields.io/github/license/miajupiter/env-sample) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fmiajupiter%2Fenv-sample&count_bg=%236495ED&title_bg=%23323232&icon=cliqz.svg&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com) [![](https://img.shields.io/badge/readme-docs-chocolate.svg)](https://github.com/miajupiter/env-sample#readme) [![](https://img.shields.io/github/stars/miajupiter/env-sample?color=yellow&label=stars&logo=github)](https://github.com/miajupiter/env-sample/stargazers)
+[![npm](https://img.shields.io/npm/v/env-sample?label=npm&logo=npm) ](https://www.npmjs.com/package/env-sample) [![download](https://img.shields.io/npm/dt/env-sample?label=downloads&logo=npm)](https://www.npmjs.com/package/env-sample) [![GitHub](https://img.shields.io/github/license/miajupiter/sms-auth)](https://choosealicense.com/licenses/mit/) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fmiajupiter%2Fenv-sample&count_bg=%236495ED&title_bg=%23323232&icon=cliqz.svg&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com) [![](https://img.shields.io/badge/readme-docs-chocolate.svg)](https://github.com/miajupiter/env-sample#readme) [![](https://img.shields.io/github/stars/miajupiter/env-sample?color=yellow&label=stars&logo=github)](https://github.com/miajupiter/env-sample/stargazers)
 
 
 ## Table of contents
@@ -98,7 +98,7 @@ envSample(options)
 ```dosini
 # jwt variables
 TOKEN_EXPIRES_IN=31536022 # valid for 1 year
-TOKEN_PHRASE=upperWorld
+TOKEN_PHRASE=upper520World
 
 # MongoDB variables
 # password special chars -->  : / ? # [ ] @
@@ -111,13 +111,14 @@ MONGODB_USERDB_URI='mongodb://localhost:27017/'       # user database server
 DEBUG=false
 PRIVATE_KEY="-----BEGIN RSA PRIVATE KEY-----
 ...
+crt ys 319612719849...589317318614
 Kh9NV...
 ...
 -----END RSA PRIVATE KEY-----"   # Make this variable too, let's see!
 MY_NAME=shamanCoders
-
-TEST=4444
-##########################  TEST 1 2 3 ######################################
+USER_ID=319817318  # for all mankind
+TEST=4445
+##########################  TEST 7 7 7 ######################################
 ```
 
 ### After | Target `.env.sample`
@@ -138,9 +139,9 @@ MONGODB_USERDB_URI= # user database server
 DEBUG=false
 PRIVATE_KEY= # Make this variable too, let's see!
 MY_NAME=
-
+USER_ID= # for all mankind
 TEST=
-##########################  TEST 1 2 3 ######################################
+##########################  TEST 7 7 7 ######################################
 
 # --------------------------------------------------------------------
 # 2023-Now (c) MiaJupiter. All rights reserved. https://miajupiter.com
