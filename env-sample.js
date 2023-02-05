@@ -28,9 +28,9 @@ module.exports = (userOptions) =>{
         generateEnvSample()
       }
     })
+  }else{
+    generateEnvSample()
   }
-
-
 }
 
 function generateEnvSample() {
