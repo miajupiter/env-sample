@@ -1,6 +1,6 @@
 {
   "name": "env-sample",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Removes your secret values in '.env' file and generate '.env-sample'. It supports multiline values and protects comments.",
   "main": "env-sample.js",
   "scripts": {
