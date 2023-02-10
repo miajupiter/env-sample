@@ -24,9 +24,8 @@ module.exports = (userOptions) =>{
     fs.watchFile(options.env, (current, previous) => {
       if(current.nlink==0){
         fs.existsSync(options.sample) && fs.unlinkSync(options.sample)
-      }else{
-        generateEnvSample()
       }
+      generateEnvSample()
     })
   }else{
     generateEnvSample()
