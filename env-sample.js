@@ -3,10 +3,10 @@ const path = require('path')
 
 var options = {
   env: '.env',
-  sample: '.env.sample',
+  sample: '.env-sample',
   mask: '',
   watch: false,
-  banner:`2023-Now (c) MiaJupiter. All rights reserved. https://miajupiter.com`
+  banner:`2024 (c) MiaJupiter. All rights reserved. https://miajupiter.com`
 }
 
 module.exports = (userOptions) =>{
@@ -80,7 +80,6 @@ function generateEnvSample() {
         s += line
         s += '\n'
       }
-      
     }
   })
 

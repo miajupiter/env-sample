@@ -5,7 +5,7 @@ const args = require('yargs').argv
 if(args.h || args.help){
   let s=`
   Usage: env-sample [options]
-  
+
   Options:
 
   -e, --env             Source file. default is ".env"

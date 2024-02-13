@@ -52,7 +52,7 @@ $ env-sample -h
   Options:
   
   -e, --env             Source file. default is ".env"
-  -s, --sample          Target file. default ".env.sample"
+  -s, --sample          Target file. default ".env-sample"
   -m, --mask            Mask character. example: "*", " ", etc.
                         default is "" (empty string)
   -b, --banner          Set your banner to bottom of target.
@@ -84,7 +84,7 @@ envSample()
 const envSample = require('env-sample')
 const options={
 	env: '.env',
-	sample: '.env.sample',
+	sample: '.env-sample',
 	mask: '',
 	watch: false,
 	banner:`2023-Now (c) MiaJupiter. All rights reserved. https://miajupiter.com`
